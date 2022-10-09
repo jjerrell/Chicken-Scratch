@@ -1,6 +1,7 @@
 plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+    alias(projectLibs.plugins.android.library)
+    alias(projectLibs.plugins.android.kotlin)
+    alias(projectLibs.plugins.spotless)
 }
 
 android {

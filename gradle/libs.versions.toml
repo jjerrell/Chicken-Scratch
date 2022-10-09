@@ -43,6 +43,7 @@ compose-debug-manifest = { module = "androidx.compose.ui:ui-tooling", version.re
 compose-debug = ["compose-debug-tooling", "compose-debug-manifest"]
 compose-test = ["junit-android", "junit-compose"]
 compose-ui = [ "android-core-ktx", "compose-ui", "compose-material" ]
+
 [plugins]
 # the [plugins] section is used to declare plugins
 # example:
@@ -50,6 +51,7 @@ compose-ui = [ "android-core-ktx", "compose-ui", "compose-material" ]
 android-application = { id = "com.android.application", version.ref = "android" }
 android-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "android" }
+java-library = { id = "java-library", version = ""}
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin"}
 spotless = { id = "com.diffplug.spotless", version = "6.11.0"}
 

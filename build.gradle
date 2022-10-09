@@ -10,7 +10,7 @@ plugins {
 // spotless code-check configuration
 spotless {
     // optional: limit format enforcement to just the files changed by this feature branch
-    ratchetFrom 'origin/main'
+    ratchetFrom 'origin/master'
 
     format 'misc', {
         // define the files to apply `misc` to
@@ -24,17 +24,5 @@ spotless {
     kotlin {
         ktfmt().dropboxStyle()
         licenseHeader '/* Jerrell, Jacob (C)$YEAR */' // or licenseHeaderFile
-    }
-    java {
-        // don't need to set target, it is inferred from java
-
-        // apply a specific flavor of google-java-format
-        googleJavaFormat('1.8').aosp().reflowLongStrings()
-        // fix formatting of type annotations
-        formatAnnotations()
-        // make sure every file has the following copyright header.
-        // optionally, Spotless can set copyright years by digging
-        // through git history (see "license" section below)
-        licenseHeader '/* Jerrell, Jacob (C)$YEAR */'
     }
 }
