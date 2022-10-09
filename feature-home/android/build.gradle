@@ -1,7 +1,7 @@
 plugins {
-    alias(projectLibs.plugins.android.library)
-    alias(projectLibs.plugins.android.kotlin)
-    alias(projectLibs.plugins.spotless)
+    alias(deps.plugins.android.library)
+    alias(deps.plugins.android.kotlin)
+    alias(deps.plugins.spotless)
 }
 
 android {
@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation projectLibs.bundles.compose.ui
-    testImplementation projectLibs.junit
-    androidTestImplementation projectLibs.bundles.compose.test
+    implementation deps.bundles.compose.ui
+    testImplementation deps.junit
+    androidTestImplementation deps.bundles.compose.test
 }

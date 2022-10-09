@@ -1,10 +1,10 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    alias(projectLibs.plugins.android.application) apply false
-    alias(projectLibs.plugins.android.library) apply false
-    alias(projectLibs.plugins.android.kotlin) apply false
-    alias(projectLibs.plugins.kotlin.jvm) apply false
-    alias(projectLibs.plugins.spotless) apply true
+    alias(deps.plugins.android.application) apply false
+    alias(deps.plugins.android.library) apply false
+    alias(deps.plugins.android.kotlin) apply false
+    alias(deps.plugins.kotlin.jvm) apply false
+    alias(deps.plugins.spotless) apply true
 }
 
 // spotless code-check configuration

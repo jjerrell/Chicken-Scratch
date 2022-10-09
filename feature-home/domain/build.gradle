@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
-    alias(projectLibs.plugins.kotlin.jvm)
-    alias(projectLibs.plugins.spotless)
+    alias(deps.plugins.kotlin.jvm)
+    alias(deps.plugins.spotless)
 }
 
 java {

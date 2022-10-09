@@ -1,6 +1,5 @@
 package app.jjerrell.game.ui.components.bar
 
-import androidx.compose.foundation.Image
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.ui.test.*

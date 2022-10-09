@@ -1,11 +1,11 @@
 plugins {
-    alias(projectLibs.plugins.android.library)
-    alias(projectLibs.plugins.android.kotlin)
-    alias(projectLibs.plugins.spotless)
+    alias(deps.plugins.android.library)
+    alias(deps.plugins.android.kotlin)
+    alias(deps.plugins.spotless)
 }
 
 android {
-    namespace 'app.jjerrell.game.ui.debug'
+    namespace 'app.jjerrell.game.ui.theme'
     compileSdk 33
 
     defaultConfig {
@@ -44,11 +44,10 @@ android {
 
 dependencies {
     // core
-    implementation project(":ui:theme")
+    implementation deps.bundles.compose.ui
     // test
-    implementation projectLibs.junit
-    // test android
-    implementation projectLibs.bundles.compose.test
+    testImplementation deps.junit
+    androidTestImplementation deps.bundles.compose.test
     // debug
-    debugImplementation projectLibs.bundles.compose.debug
+    debugImplementation deps.bundles.compose.debug
 }

@@ -1,6 +1,6 @@
 plugins {
-    alias(projectLibs.plugins.android.application)
-    alias(projectLibs.plugins.android.kotlin)
+    alias(deps.plugins.android.application)
+    alias(deps.plugins.android.kotlin)
 }
 
 android {
@@ -48,17 +48,17 @@ android {
 
 dependencies {
     // core
-    implementation projectLibs.bundles.compose.ui
+    implementation deps.bundles.compose.ui
     implementation "androidx.activity:activity-compose:1.6.0"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
 
     // local
-    implementation project(":ui:theme")
+    implementation project(":core:ui:theme")
 
     // test
-    testImplementation projectLibs.junit
-    androidTestImplementation projectLibs.espresso
-    androidTestImplementation projectLibs.bundles.compose.test
+    testImplementation deps.junit
+    androidTestImplementation deps.espresso
+    androidTestImplementation deps.bundles.compose.test
     // debug
-    debugImplementation(projectLibs.bundles.compose.debug)
+    debugImplementation(deps.bundles.compose.debug)
 }
