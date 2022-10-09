@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'app.jjerrell.game.algorithmicsort'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "app.jjerrell.game.algorithmicsort"
+        minSdk 29
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.1.1'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    // core
+    implementation projectLibs.bundles.compose.ui
+    implementation "androidx.activity:activity-compose:1.6.0"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+
+    // local
+    implementation project(":ui:theme")
+
+    // test
+    testImplementation projectLibs.junit
+    androidTestImplementation projectLibs.espresso
+    androidTestImplementation projectLibs.bundles.compose.test
+    // debug
+    debugImplementation(projectLibs.bundles.compose.debug)
+}
